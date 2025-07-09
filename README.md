@@ -1,0 +1,11 @@
+# FAC
+## Introduction
+This is our implementation of our paper *Filtering-and-Alternating-Calibration: Spatiotemporal Context Alternating Aggregation for Event-based Monocular Depth Estimation*. Authors: Jianye Yang, Shaofan Wang, Binbin Chen, Yanfeng Sun, Baocai Yin, Member, IEEE. Submitted to IEEE Transactions on circuits and systems for video technology
+
+**Abstract**:
+Abstract—Event cameras capture asynchronous pixel-level intensity changes, leading to wide applications to monocular depth estimation under high-speed and low-light environment. Existing event-based depth estimation methods suffer from two unavoidable issues: (a) event sparsity and pollution, arising from the large amount of spike noise and light intensity sensitivity; (b) spatiotemporal relation deviation, due to the unevenly distribution of spikes along temporal axis. Inspired from the attention calibration to nature language processing, we propose a Filtering-and-Alternating-Calibration network (FAC), using a U-Net architecture whose encoders and decoders are swin transformers. The key components of FAC are filtering-based temporal context fusion (FTF) modules and alternating-calibration-based spatial context fusion (ACSF) modules, serving as the skip connection between pairwise encoded and decoded feature maps. Towards the issue (a), each FTF module learns the cross attention between current encoded feature maps of current event frame and previous event frame, where the latter is filtered with a low-pass filter, reducing the redundancy and irrelevant noise. Towards the issue (b), each ACSF module utilizes the alternating attention calibration between the temporal context aggregation map (the output of FTF module) and the decoded feature map, which facilitates the spatial context interaction and calibrates long-range spatiotemporal relation. Thanks to the alternating attention calibration, the encoded and decoded feature maps calibrate each other with motion-corrected temporal clues and deeper spatial clues, respectively. Experiments on MVSEC and DENSE datasets show that, FAC outperforms several state-ofthe-art depth estimation approaches in terms of several metrics. 
+
+## Dependencies
+- python==3.9
+- torch==2.4.1
+
